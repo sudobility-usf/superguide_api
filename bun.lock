@@ -1,12 +1,13 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "starter_api",
       "dependencies": {
-        "@sudobility/auth_service": "^1.1.9",
-        "@sudobility/superguide_types": "^0.0.7",
-        "@sudobility/types": "^1.9.54",
+        "@sudobility/auth_service": "^1.1.10",
+        "@sudobility/superguide_types": "^0.0.8",
+        "@sudobility/types": "^1.9.55",
         "drizzle-orm": "^0.44.2",
         "firebase-admin": "^13.4.0",
         "hono": "^4.7.0",
@@ -216,11 +217,11 @@
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
-    "@sudobility/auth_service": ["@sudobility/auth_service@1.1.9", "", { "peerDependencies": { "@sudobility/types": "^1.9.54", "firebase-admin": "^13.0.0" } }, "sha512-sYGBInajjRPHzEVOnrcmCob/X64rVCuS7bVpj7MzYRqcG0LuQis8k0Pb1lrbwYJ9jDPgG8xwToCSM7Q3rMipxw=="],
+    "@sudobility/auth_service": ["@sudobility/auth_service@1.1.10", "", { "peerDependencies": { "@sudobility/types": "^1.9.55", "firebase-admin": "^13.0.0" } }, "sha512-LUONbozetwVoBgrRC9mYWwvfzTPXdJH6Wb/GKZ8pbBVzFlEZxlY1Xby68kHZSTUPQT2c63nQ7XSjyNIIihXjjQ=="],
 
-    "@sudobility/superguide_types": ["@sudobility/superguide_types@0.0.7", "", { "peerDependencies": { "@sudobility/types": "^1.9.54" } }, "sha512-3TTBI4Wtn1pbkGZHoHJzwHh71bKOh6ZQlvodCu/NgJzU69+S2HslziK8UeRUwM9xNGb/QL4s/KLV0NmM2DMcwA=="],
+    "@sudobility/superguide_types": ["@sudobility/superguide_types@0.0.8", "", { "peerDependencies": { "@sudobility/types": "^1.9.55" } }, "sha512-Ip3V+u4c0TE7NxYCULi3kSnl8J+Kp8DTKD1ZrPsWmhT1Jyx5jEzc6h5o0RYVbuCqzVvIlWfbuJFPkvmxwqrNqg=="],
 
-    "@sudobility/types": ["@sudobility/types@1.9.54", "", {}, "sha512-A2Kxr639D8NqPbudeARhp1cbKlE6YBf7NKaU8Gh1XwajgV9sqTBMEB+IfFpifU/tKg1JFEj/t5qmPPK4VzdZaw=="],
+    "@sudobility/types": ["@sudobility/types@1.9.55", "", {}, "sha512-cl8RwuaKSa6hBTuH7ipTXtJH1dLQCtLJsxEnwMmKvpCN+RINP6nR8VDUTmHONLP1IQ1pSPBvUmR0Ip+J63cL5g=="],
 
     "@tootallnate/once": ["@tootallnate/once@2.0.0", "", {}, "sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A=="],
 

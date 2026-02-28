@@ -1,6 +1,6 @@
 {
   "name": "superguide_api",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "description": "Starter API - Hono backend with PostgreSQL + Drizzle ORM",
   "scripts": {
@@ -17,9 +17,9 @@
     "verify": "bun run typecheck && bun run lint && bun run test && bun run build"
   },
   "dependencies": {
-    "@sudobility/auth_service": "^1.1.9",
-    "@sudobility/superguide_types": "^0.0.7",
-    "@sudobility/types": "^1.9.54",
+    "@sudobility/auth_service": "^1.1.10",
+    "@sudobility/superguide_types": "^0.0.8",
+    "@sudobility/types": "^1.9.55",
     "drizzle-orm": "^0.44.2",
     "firebase-admin": "^13.4.0",
     "hono": "^4.7.0",
