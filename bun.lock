@@ -5,9 +5,9 @@
     "": {
       "name": "starter_api",
       "dependencies": {
-        "@sudobility/auth_service": "^1.1.11",
-        "@sudobility/superguide_types": "^0.0.9",
-        "@sudobility/types": "^1.9.57",
+        "@sudobility/auth_service": "^1.1.12",
+        "@sudobility/superguide_types": "^0.0.10",
+        "@sudobility/types": "^1.9.58",
         "drizzle-orm": "^0.44.2",
         "firebase-admin": "^13.4.0",
         "hono": "^4.7.0",
@@ -217,11 +217,11 @@
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
-    "@sudobility/auth_service": ["@sudobility/auth_service@1.1.11", "", { "peerDependencies": { "@sudobility/types": "^1.9.57", "firebase-admin": "^13.0.0" } }, "sha512-7I9eaDhHQMI0p1dD4gppxNXJFdpOjbhYXSe86+L3S+GAf92Z9cK4j64PO98Sazt1YoAN/p2uAlQXjn+a5bxUNA=="],
+    "@sudobility/auth_service": ["@sudobility/auth_service@1.1.12", "", { "peerDependencies": { "@sudobility/types": "^1.9.58", "firebase-admin": "^13.0.0" } }, "sha512-K0CJXE3c3zF9SW3IVznDMrIcsxAyPDjgT1D4vStr7OjI4iM4tHjVTtdPJrMP/R/7FcprjfoPJk7sk2DwbmHYSw=="],
 
-    "@sudobility/superguide_types": ["@sudobility/superguide_types@0.0.9", "", { "peerDependencies": { "@sudobility/types": "^1.9.57" } }, "sha512-iy69KyKDaOZQ46V8R4lpiPAEZqRQY+jtOpPQ9n2Agq8M9isPel0Z8cIdMhJxeOAEJIfspHAf2wOzZmZnxanGAA=="],
+    "@sudobility/superguide_types": ["@sudobility/superguide_types@0.0.10", "", { "peerDependencies": { "@sudobility/types": "^1.9.58" } }, "sha512-+h7EMpc8+142b24UiQ1Hv4cK1D9i72qkbTrNHT1ofvI8nJ8veIxWK0XCMA+R7uFOpf/2zgav/S4AWsGAgb/YVA=="],
 
-    "@sudobility/types": ["@sudobility/types@1.9.57", "", {}, "sha512-POtx/cRagDEdnEwrXfuoyzhNKyGahD7TYJRZT7WYW6+9ID1ZHwWDGkI88KmenKtwsljiJPQZ9+QM7jy13hdv3g=="],
+    "@sudobility/types": ["@sudobility/types@1.9.58", "", {}, "sha512-GD6pS8C8loS8SnD7ynzDBCJ++Z9N0vzLTEO03nxFISffrEX67nNOrBEs8LqCU3yFn4LJowiIV7JyigNLCQUAoA=="],
 
     "@tootallnate/once": ["@tootallnate/once@2.0.0", "", {}, "sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A=="],
 
