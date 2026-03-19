@@ -33,8 +33,7 @@ describe("Database Schema", () => {
     });
 
     it("should have expected column names", () => {
-      const columns =
-        histories[Symbol.for("drizzle:Columns") as any] as any;
+      const columns = histories[Symbol.for("drizzle:Columns") as any] as any;
       expect(columns.id).toBeDefined();
       expect(columns.user_id).toBeDefined();
       expect(columns.datetime).toBeDefined();
@@ -44,20 +43,17 @@ describe("Database Schema", () => {
     });
 
     it("should have user_id as not null", () => {
-      const columns =
-        histories[Symbol.for("drizzle:Columns") as any] as any;
+      const columns = histories[Symbol.for("drizzle:Columns") as any] as any;
       expect(columns.user_id.notNull).toBe(true);
     });
 
     it("should have datetime as not null", () => {
-      const columns =
-        histories[Symbol.for("drizzle:Columns") as any] as any;
+      const columns = histories[Symbol.for("drizzle:Columns") as any] as any;
       expect(columns.datetime.notNull).toBe(true);
     });
 
     it("should have value as not null", () => {
-      const columns =
-        histories[Symbol.for("drizzle:Columns") as any] as any;
+      const columns = histories[Symbol.for("drizzle:Columns") as any] as any;
       expect(columns.value.notNull).toBe(true);
     });
   });

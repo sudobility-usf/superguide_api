@@ -13,7 +13,8 @@ import { getRequiredEnv, getEnv } from "../lib/env-helper";
  * In test mode, Firebase Admin SDK is not initialized and token verification
  * will throw an error. This prevents tests from requiring real Firebase credentials.
  */
-const isTestMode = getEnv("NODE_ENV") === "test" || getEnv("BUN_ENV") === "test";
+const isTestMode =
+  getEnv("NODE_ENV") === "test" || getEnv("BUN_ENV") === "test";
 
 if (!isTestMode) {
   initializeAuth({

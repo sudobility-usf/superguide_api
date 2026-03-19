@@ -1,8 +1,5 @@
 import { describe, it, expect } from "vitest";
-import {
-  successResponse,
-  errorResponse,
-} from "@sudobility/superguide_types";
+import { successResponse, errorResponse } from "@sudobility/superguide_types";
 import type {
   History,
   HistoryCreateRequest,
@@ -46,8 +43,7 @@ describe("histories route logic", () => {
 
     it("should reject missing value", () => {
       const body = { datetime: "2024-01-01" } as any;
-      const hasValue =
-        body.value !== undefined && body.value !== null;
+      const hasValue = body.value !== undefined && body.value !== null;
       expect(hasValue).toBe(false);
     });
 
@@ -93,8 +89,7 @@ describe("histories route logic", () => {
       const userId = "user-123";
       const tokenUserId = "user-123";
       const siteAdmin = false;
-      const authorized =
-        userId === tokenUserId || siteAdmin;
+      const authorized = userId === tokenUserId || siteAdmin;
       expect(authorized).toBe(true);
     });
 
@@ -102,8 +97,7 @@ describe("histories route logic", () => {
       const userId = "user-123";
       const tokenUserId = "user-456";
       const siteAdmin = false;
-      const authorized =
-        userId === tokenUserId || siteAdmin;
+      const authorized = userId === tokenUserId || siteAdmin;
       expect(authorized).toBe(false);
     });
 
@@ -111,8 +105,7 @@ describe("histories route logic", () => {
       const userId = "user-123";
       const tokenUserId = "user-456";
       const siteAdmin = true;
-      const authorized =
-        userId === tokenUserId || siteAdmin;
+      const authorized = userId === tokenUserId || siteAdmin;
       expect(authorized).toBe(true);
     });
   });
@@ -173,7 +166,10 @@ describe("histories route logic", () => {
       orderBy?: string;
     }) {
       const limit = Math.min(
-        Math.max(1, parseInt(params.limit || String(DEFAULT_LIMIT), 10) || DEFAULT_LIMIT),
+        Math.max(
+          1,
+          parseInt(params.limit || String(DEFAULT_LIMIT), 10) || DEFAULT_LIMIT
+        ),
         MAX_LIMIT
       );
       const offset = Math.max(0, parseInt(params.offset || "0", 10) || 0);
@@ -261,9 +257,7 @@ describe("histories route logic", () => {
     });
 
     it("should format validation error", () => {
-      const response = errorResponse(
-        "datetime and value are required"
-      );
+      const response = errorResponse("datetime and value are required");
       expect(response.success).toBe(false);
       expect(response.error).toBe("datetime and value are required");
     });

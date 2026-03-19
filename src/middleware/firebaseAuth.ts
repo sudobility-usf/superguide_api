@@ -106,7 +106,7 @@ export async function firebaseAuthMiddleware(c: Context, next: Next) {
     c.set("userEmail", userEmail);
     c.set("siteAdmin", isSiteAdmin(userEmail));
 
-    ensureUserExists(userId, userEmail).catch((err) =>
+    ensureUserExists(userId, userEmail).catch(err =>
       console.error("Failed to ensure user exists:", err)
     );
 

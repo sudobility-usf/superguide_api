@@ -16,7 +16,7 @@ const historiesTotalRouter = new Hono();
  *
  * @returns {BaseResponse<HistoryTotalResponse>} Object with a `total` number field
  */
-historiesTotalRouter.get("/total", async (c) => {
+historiesTotalRouter.get("/total", async c => {
   const result = await db
     .select({
       total: sql<string>`COALESCE(SUM(${histories.value}), 0)`,

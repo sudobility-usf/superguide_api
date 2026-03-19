@@ -32,7 +32,7 @@ app.onError((err, c) => {
  * Public endpoint that returns the API name, version, and health status.
  * Useful for service discovery and basic connectivity checks.
  */
-app.get("/", (c) => {
+app.get("/", c => {
   return c.json(
     successResponse({
       name: "Starter API",
@@ -49,7 +49,7 @@ app.get("/", (c) => {
  * Used by load balancers, container orchestrators, and monitoring systems
  * to determine if the service is running.
  */
-app.get("/health", (c) => {
+app.get("/health", c => {
   return c.json(successResponse({ status: "ok", version: "1.0.0" }));
 });
 
@@ -61,7 +61,7 @@ initDatabase()
   .then(() => {
     console.log(`Starter API running on http://localhost:${port}`);
   })
-  .catch((err) => {
+  .catch(err => {
     console.error("Failed to initialize database:", err);
     process.exit(1);
   });

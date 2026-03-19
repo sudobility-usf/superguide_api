@@ -75,7 +75,7 @@ export const histories = starterSchema.table(
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
   },
-  (table) => ({
+  table => ({
     userIdx: index("superguide_histories_user_idx").on(table.user_id),
   })
 );

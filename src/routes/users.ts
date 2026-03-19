@@ -22,7 +22,7 @@ const usersRouter = new Hono();
  * @throws 403 if the requesting user is not authorized to view this profile
  * @throws 404 if no user record exists for the given Firebase UID
  */
-usersRouter.get("/:userId", async (c) => {
+usersRouter.get("/:userId", async c => {
   const userId = c.req.param("userId");
   const tokenUserId = c.get("userId");
 

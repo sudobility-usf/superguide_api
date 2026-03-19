@@ -1,5 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { serializeHistory, serializeUser, isValidDatetime } from "./serializers";
+import {
+  serializeHistory,
+  serializeUser,
+  isValidDatetime,
+} from "./serializers";
 
 describe("serializers", () => {
   describe("serializeHistory", () => {

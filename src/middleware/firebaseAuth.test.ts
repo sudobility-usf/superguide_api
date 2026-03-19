@@ -62,9 +62,7 @@ describe("firebaseAuth middleware logic", () => {
     });
 
     it("should return invalid token error", () => {
-      const response = errorResponse(
-        "Invalid or expired Firebase token"
-      );
+      const response = errorResponse("Invalid or expired Firebase token");
       expect(response.success).toBe(false);
       expect(response.error).toContain("Firebase");
     });

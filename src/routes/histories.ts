@@ -28,7 +28,7 @@ const MAX_LIMIT = 200;
  * @example
  * GET /api/v1/users/:userId/histories?limit=20&offset=0&orderBy=desc
  */
-historiesRouter.get("/", async (c) => {
+historiesRouter.get("/", async c => {
   const userId = c.req.param("userId")!;
   const tokenUserId = c.get("userId");
 
@@ -42,7 +42,10 @@ historiesRouter.get("/", async (c) => {
   const orderByParam = c.req.query("orderBy");
 
   const limit = Math.min(
-    Math.max(1, parseInt(limitParam || String(DEFAULT_LIMIT), 10) || DEFAULT_LIMIT),
+    Math.max(
+      1,
+      parseInt(limitParam || String(DEFAULT_LIMIT), 10) || DEFAULT_LIMIT
+    ),
     MAX_LIMIT
   );
   const offset = Math.max(0, parseInt(offsetParam || "0", 10) || 0);
@@ -80,7 +83,7 @@ historiesRouter.get("/", async (c) => {
  * @throws 400 if `datetime` is not a valid date string
  * @throws 403 if the user is not authorized
  */
-historiesRouter.post("/", async (c) => {
+historiesRouter.post("/", async c => {
   const userId = c.req.param("userId")!;
   const tokenUserId = c.get("userId");
 
@@ -135,7 +138,7 @@ historiesRouter.post("/", async (c) => {
  * @throws 403 if the user is not authorized
  * @throws 404 if the history record is not found or does not belong to the user
  */
-historiesRouter.put("/:historyId", async (c) => {
+historiesRouter.put("/:historyId", async c => {
   const userId = c.req.param("userId")!;
   const historyId = c.req.param("historyId")!;
   const tokenUserId = c.get("userId");
@@ -194,7 +197,7 @@ historiesRouter.put("/:historyId", async (c) => {
  * @throws 403 if the user is not authorized
  * @throws 404 if the history record is not found or does not belong to the user
  */
-historiesRouter.delete("/:historyId", async (c) => {
+historiesRouter.delete("/:historyId", async c => {
   const userId = c.req.param("userId")!;
   const historyId = c.req.param("historyId")!;
   const tokenUserId = c.get("userId");
