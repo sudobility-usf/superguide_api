@@ -37,5 +37,10 @@
     "prettier": "^3.7.4",
     "typescript": "~5.9.3",
     "vitest": "^4.0.15"
+  },
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudobility-usf/superguide_api.git"
   }
 }
