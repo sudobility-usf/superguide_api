@@ -92,6 +92,23 @@ export async function initDatabase() {
     ON superguide.histories(user_id)
   `;
 
+  await client`
+    CREATE TABLE IF NOT EXISTS superguide.trips (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      user_id VARCHAR(128) NOT NULL REFERENCES superguide.users(firebase_uid) ON DELETE CASCADE,
+      location VARCHAR(255) NOT NULL,
+      start_date DATE NOT NULL,
+      end_date DATE NOT NULL,
+      itin JSONB NOT NULL,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `;
+
+  await client`
+    CREATE INDEX IF NOT EXISTS superguide_trips_user_idx
+    ON superguide.trips(user_id)
+  `;
+
   console.log("Database tables initialized");
 }
 
