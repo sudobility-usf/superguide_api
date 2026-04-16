@@ -5,6 +5,7 @@ import historiesRouter from "./histories";
 import historiesTotalRouter from "./historiesTotal";
 import restaurantsRouter from "./restaurants";
 import tripsRouter from "./trips";
+import savedTripsRouter from "./savedTrips";
 
 /**
  * Aggregated API routes for the `/api/v1` prefix.
@@ -28,8 +29,12 @@ routes.route("/trips", tripsRouter);
 // Auth-required routes
 const authRoutes = new Hono();
 authRoutes.use("*", firebaseAuthMiddleware);
-authRoutes.route("/users/:userId", usersRouter);
+// More-specific sub-routes MUST be declared before the generic users router,
+// because Hono matches in declaration order and the users router's `/:userId`
+// handler would otherwise swallow paths like `/users/:userId/trips`.
 authRoutes.route("/users/:userId/histories", historiesRouter);
+authRoutes.route("/users/:userId/trips", savedTripsRouter);
+authRoutes.route("/users/:userId", usersRouter);
 routes.route("/", authRoutes);
 
 export default routes;
