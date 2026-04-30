@@ -114,3 +114,11 @@ Uses `@sudobility/auth_service` for Firebase token verification with caching.
 - The DB Proxy pattern means connection errors only surface on first actual query, not at startup
 - `FIREBASE_PRIVATE_KEY` often needs newline escaping (`\\n` -> `\n`) depending on how it is set in the environment
 
+## Task Workflow
+
+- Read `plans/ACTIVE_TASK.md` before starting work.
+- If `plans/ACTIVE_TASK.md` says `idle`, do not self-assign from the backlog.
+- Use `plans/STATUS.md` for progress notes, blockers, verification results, and handoff context.
+- Use `plans/WORK_QUEUE.md` for backlog management only; keep the live assignment in `plans/ACTIVE_TASK.md`.
+- Treat `plans/IMPROVEMENTS.md` as reference material, not the source of truth for the current assignment.
+- Assume only one active task in this repo unless `plans/ACTIVE_TASK.md` explicitly says otherwise.
